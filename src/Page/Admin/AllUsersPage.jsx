@@ -9,10 +9,10 @@ const AllUsersPage = () => {
 
     const changeStatus = (id, status) => {
         axiosData.patch(`/changerole?id=${id}&status=${status}`)
-        .then(res => {
-            console.log(res.data)
-            refetch();
-        })
+            .then(res => {
+                console.log(res.data)
+                refetch();
+            })
     }
 
 
@@ -21,7 +21,7 @@ const AllUsersPage = () => {
 
 
         <div>
-             <Helmet>
+            <Helmet>
                 <title>Blood Donation | All Users</title>
                 <meta name="description" content="Helmet application" />
             </Helmet>
@@ -68,6 +68,7 @@ const AllUsersPage = () => {
                                                 item?.role !== 'admin' && <th className='flex justify-end items-center gap-4'>
                                                     <button onClick={() => changeStatus(item._id, 'donor')} className="btn btn-primary">Donor</button>
                                                     <button onClick={() => changeStatus(item._id, 'admin')} className="btn btn-primary">Admin</button>
+                                                    <button onClick={() => changeStatus(item._id, 'volunteer')} className="btn btn-primary">Volunteer</button>
                                                 </th>
                                             }
 

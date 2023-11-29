@@ -19,14 +19,9 @@ const Donar = () => {
                     <div className="max-w-md">
                         <h1 className="mb-5 text-5xl font-bold">Welcome To New User’s</h1>
                         <p className="mb-5">{user.displayName}</p>
-                        <button className="btn btn-primary">Get Started</button>
                     </div>
                 </div>
             </div>
-
-
-
-
 
             <div className="flex justify-center items-center gap-6 my-10">
                 <div class="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">

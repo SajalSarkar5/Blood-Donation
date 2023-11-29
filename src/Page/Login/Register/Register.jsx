@@ -6,6 +6,7 @@ import GoogleLogin from "../../../components/GoogleLogin";
 import useAxios from "../../../hook/useAxios";
 import Swal from "sweetalert2";
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
 
@@ -54,7 +55,7 @@ const Register = () => {
                         email: user.user.email,
                         name: user?.user?.displayName,
                         photo: user?.user?.photoURL,
-                        role: 'Volunteer'
+                        role: 'donor'
                     }
                     axiosAuth.post('/user', userInfo)
                         .then(res => {
@@ -77,6 +78,10 @@ const Register = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Blood Donation | Register</title>
+                <meta name="description" content="Helmet application" />
+            </Helmet>
             <div className="hero min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-gray-100">

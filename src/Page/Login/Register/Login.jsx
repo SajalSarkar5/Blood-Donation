@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import toast from "react-hot-toast";
 import GoogleLogin from "../../../components/GoogleLogin";
+import { Helmet } from "react-helmet";
 
 
 const Login = () => {
@@ -33,6 +34,10 @@ const Login = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Blood Donation | Login</title>
+                <meta name="description" content="Helmet application" />
+            </Helmet>
 
             <div className="hero min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">

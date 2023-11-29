@@ -10,7 +10,6 @@ const MyDonationRequests = () => {
 
     return (
         <div>
-            <h1>My Donation Requests</h1>
 
 
             <div class="flex flex-col">

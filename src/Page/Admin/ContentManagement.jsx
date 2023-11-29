@@ -2,11 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useContentManagement from '../../hook/useContentManagement';
 import { Helmet } from 'react-helmet';
+import useAxios from '../../hook/useAxios';
 
 const ContentManagement = () => {
 
-    const { isPending, error, allcontent } = useContentManagement()
-    console.log(allcontent)
+    const { isPending, error, allcontent, refetch } = useContentManagement()
+
+    const axiosData = useAxios();
+
+    const handelDelet = (id) => {
+        axiosData.delete(`/itemdelet/${id}`)
+            .then(res => {
+                console.log(res.data)
+                refetch()
+            })
+    }
+    // console.log(allcontent)
 
     return (
         <div>
@@ -52,6 +63,7 @@ const ContentManagement = () => {
                                                             {item.text}
                                                         </h3>
                                                     </div>
+                                                    <button onClick={() => handelDelet(item._id)} className='btn btn-danger w-full'>Delete</button>
                                                 </a>
                                             })
                                         }

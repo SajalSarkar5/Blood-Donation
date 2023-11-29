@@ -51,7 +51,7 @@ const Banner = () => {
                     <div key={index}>
                         <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
                             <div>
-                                <div className='text-center px-52'>
+                                <div className='text-center px-10 md:px-10 lg:px-52'>
                                     <h1 className='text-2xl font-semibold text-white'>Join Us in Our Blood Donation Drive!</h1>
                                     <p className='text-white font-normal text-base'>Participate in our upcoming blood donation event! Your donation can save lives, providing a lifeline for those in need. Every contribution matters. Join us in this noble cause, and make a meaningful impact on someone's life.</p>
                                 </div>
