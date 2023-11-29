@@ -76,12 +76,7 @@ const AllUsersPage = () => {
                                         </tr>
                                     })
                                 }
-
-
                             </tbody>
-
-
-
                         </table>
                     </div>
                     : <h1>No Data Here</h1>
