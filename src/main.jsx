@@ -24,7 +24,6 @@ import MyDonationRequests from './Page/Donar/MyDonationRequests.jsx';
 import CreateDonationRequest from './Page/Donar/CreateDonationRequest.jsx';
 import EditButton from './Page/Donar/EditButton.jsx';
 import AddBlog from './Page/Admin/AddBlog.jsx';
-import SearchPage from './Page/Searchpage.jsx';
 import BloodDonationDetails from './Page/BloodDonationDetails.jsx';
 import BlogPage from './Page/BlogPage.jsx';
 import('preline');
@@ -37,7 +36,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query';
 import DonarService from './Page/DonarService.jsx';
-import Autosearch from './common/Autosearch.jsx';
+import PrivateRoute from './privateRoute/PrivateRoute.jsx';
 const queryClient = new QueryClient()
 
 
@@ -52,20 +51,16 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/searchpage",
-        element: <SearchPage></SearchPage>,
-      },
-      {
         path: "/blooddonationdetails",
-        element: <BloodDonationDetails></BloodDonationDetails>,
+        element: <PrivateRoute><BloodDonationDetails></BloodDonationDetails></PrivateRoute>,
       },
       {
         path: "/blogpage",
-        element: <BlogPage></BlogPage>,
+        element: <PrivateRoute><BlogPage></BlogPage></PrivateRoute>,
       },
       {
         path: "/donarservice",
-        element: <DonarService></DonarService>,
+        element: <PrivateRoute><DonarService></DonarService></PrivateRoute>,
       },
       {
         path: "/login",
@@ -82,7 +77,7 @@ const router = createBrowserRouter([
 
   {
     path: "admin",
-    element: <Admin></Admin>,
+    element: <PrivateRoute><Admin></Admin></PrivateRoute>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
@@ -113,7 +108,7 @@ const router = createBrowserRouter([
 
   {
     path: "volunteer",
-    element: <Volunteer></Volunteer>,
+    element: <PrivateRoute><Volunteer></Volunteer></PrivateRoute>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
@@ -136,7 +131,7 @@ const router = createBrowserRouter([
 
   {
     path: "donardashboard",
-    element: <DonarDashboard></DonarDashboard>,
+    element: <PrivateRoute><DonarDashboard></DonarDashboard></PrivateRoute>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {

@@ -29,22 +29,22 @@ const Register = () => {
         const password = form.get('password');
         console.log(name,blood,district,upazila, photo, email, password);
 
-        // const isValidCarPassword = /^(?=.*[A-Z]).+$/.test(password);
-        // const isValidSpacialPassword = /^(?=.*[A-Z])(?=.*[^A-Za-z0-9]).+$/.test(password);
+        const isValidCarPassword = /^(?=.*[A-Z]).+$/.test(password);
+        const isValidSpacialPassword = /^(?=.*[A-Z])(?=.*[^A-Za-z0-9]).+$/.test(password);
 
-        // if (password.length < 6) {
-        //     toast.error("PLease provide 6 character password!")
-        //     return
-        // }
+        if (password.length < 6) {
+            toast.error("PLease provide 6 character password!")
+            return
+        }
 
-        // if (!isValidCarPassword) {
-        //     toast.error("PLease provide capital letter!")
-        //     return
-        // }
-        // if (!isValidSpacialPassword) {
-        //     toast.error("PLease provide special character!")
-        //     return
-        // }
+        if (!isValidCarPassword) {
+            toast.error("PLease provide capital letter!")
+            return
+        }
+        if (!isValidSpacialPassword) {
+            toast.error("PLease provide special character!")
+            return
+        }
 
 
 

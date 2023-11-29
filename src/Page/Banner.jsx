@@ -64,7 +64,7 @@ const Banner = () => {
                                         </button>
                                     </Link>
                                     <Link >
-                                        <button type="button" onClick={() => document.getElementById('my_modal_1').showModal()} class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                                        <button type="button" onClick={() => document.getElementById('my_modal_10').showModal()} class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                                             Search Donors
                                             <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                                         </button>
@@ -76,7 +76,7 @@ const Banner = () => {
                 ))}
             </Slide>
 
-            <dialog id="my_modal_1" className="modal">
+            <dialog id="my_modal_10" className="modal">
                 <div className="modal-box h-screen">
                     <Autosearch></Autosearch>
                     <div className="modal-action">
