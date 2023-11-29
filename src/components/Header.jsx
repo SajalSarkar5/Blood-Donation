@@ -25,7 +25,6 @@ const Header = () => {
             .catch()
     }
 
-
     return (
         <div>
 
