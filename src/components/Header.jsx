@@ -51,7 +51,6 @@ const Header = () => {
                             <NavLink to="/" class="font-medium text-blue-600 sm:py-6 dark:text-blue-500" aria-current="page">Home</NavLink>
                             <NavLink to="/donarservice" class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500" >Service</NavLink>
 
-
                             {
                                 isAdmin && <NavLink to="/admin" class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500" >Dashboard</NavLink>
                             }
@@ -61,8 +60,6 @@ const Header = () => {
                             {
                                 !isAdmin && !isDoner && <NavLink to="/volunteer" class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500" >Dashboard</NavLink>
                             }
-
-
 
 
 
