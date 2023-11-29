@@ -14,7 +14,7 @@ const Register = () => {
     const { createUser, auth } = useContext(AuthContext);
     const navigate = useNavigate();
 
-    
+
     const handleRegister = e => {
         e.preventDefault();
         console.log(e.currentTarget)
@@ -41,8 +41,6 @@ const Register = () => {
         //     toast.error("PLease provide special character!")
         //     return
         // }
-
-
 
 
 
