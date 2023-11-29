@@ -2,7 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import useAxios from "./useAxios";
 
 
-
 const useContentManagement = () => {
 
     const axiosData = useAxios()
