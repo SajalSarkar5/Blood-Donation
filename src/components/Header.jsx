@@ -66,8 +66,6 @@ const Header = () => {
                             <NavLink to="/blogpage" class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500" >Blog Page</NavLink>
 
 
-
-
                             {
                                 user ?
                                     <a onClick={handleSingOut} class="flex items-center gap-x-2 font-medium text-gray-500 hover:text-blue-600 md:border-s md:border-gray-300 md:my-6 md:ps-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500" href="#">
