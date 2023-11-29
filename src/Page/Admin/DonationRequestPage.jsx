@@ -32,13 +32,7 @@ const DonationRequestPage = () => {
                 <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
                     <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">My Donation Requests</h2>
                 </div>
-
-
-
                 <div>
-                    <h1>My Donation Requests</h1>
-
-
                     <div class="flex flex-col">
                         <div class="-m-1.5 overflow-x-auto">
                             <div class="p-1.5 min-w-full inline-block align-middle">
