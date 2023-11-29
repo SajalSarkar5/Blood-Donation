@@ -107,10 +107,6 @@ const Donar = () => {
                     </div>
                 </div>
             </div>
-
-
-
-
         </div>
     );
 };
