@@ -22,9 +22,12 @@ const Register = () => {
         const form = new FormData(e.currentTarget);
         const name = form.get('name');
         const photo = form.get('photo');
+        const blood = form.get('blood');
+        const district = form.get('district');
+        const upazila = form.get('upazila');
         const email = form.get('email');
         const password = form.get('password');
-        console.log(name, photo, email, password);
+        console.log(name,blood,district,upazila, photo, email, password);
 
         // const isValidCarPassword = /^(?=.*[A-Z]).+$/.test(password);
         // const isValidSpacialPassword = /^(?=.*[A-Z])(?=.*[^A-Za-z0-9]).+$/.test(password);
@@ -55,7 +58,12 @@ const Register = () => {
                         email: user.user.email,
                         name: user?.user?.displayName,
                         photo: user?.user?.photoURL,
-                        role: 'donor'
+                        role: 'donor',
+                        blood,
+                        district,
+                        upazila,
+
+
                     }
                     axiosAuth.post('/user', userInfo)
                         .then(res => {
@@ -105,6 +113,34 @@ const Register = () => {
                                 </label>
                                 <input type="text" placeholder="Photo URL" name="photo" className="input input-bordered" required />
                             </div>
+                            <div class="space-y-2">
+                                <label for="af-submit-app-category" class="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-gray-200">
+                                    Blood Group
+                                </label>
+
+                                <select id="af-submit-app-category" name='blood' class="py-2 px-3 pe-9 block w-full border-gray-200 shadow-sm rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
+                                    <option>A+</option>
+                                    <option>A-</option>
+                                    <option>B+</option>
+                                    <option>B-</option>
+                                    <option>AB+</option>
+                                    <option>AB-</option>
+                                    <option>O+</option>
+                                    <option>O-</option>
+                                </select>
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text block">District</span>
+                                </label>
+                                <input type="text" placeholder="District" name="district" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text block">Upazila</span>
+                                </label>
+                                <input type="text" placeholder="Upazila" name="upazila" className="input input-bordered" required />
+                            </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text block">Email</span>
@@ -128,7 +164,9 @@ const Register = () => {
                         <p className="text-center pb-4 text-black">Already have an account?
                             <Link to="/login"><span className="text-blue-600">Login</span></Link></p>
                     </div>
+
                 </div>
+
             </div>
 
 
