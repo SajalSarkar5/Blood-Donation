@@ -6,7 +6,6 @@ const DonarDashboardHome = () => {
     const { user } = useContext(AuthContext);
 
 
-
     return (
         <div>
             <Helmet>
@@ -29,8 +28,6 @@ const DonarDashboardHome = () => {
                 <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
                     <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">Donation Request</h2>
                 </div>
-
-
 
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
                     <div class="text-center">
