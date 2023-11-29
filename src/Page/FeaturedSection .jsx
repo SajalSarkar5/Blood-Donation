@@ -3,7 +3,6 @@
 const FeaturedSection = () => {
     return (
         <div>
-
             <section class="pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] dark:bg-dark">
                 <div class="container mx-auto">
                     <div class="-mx-4 flex flex-wrap">

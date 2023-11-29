@@ -7,7 +7,6 @@ import useAxios from "../../../hook/useAxios";
 import Swal from "sweetalert2";
 import { updateProfile } from "firebase/auth";
 
-
 const Register = () => {
 
     const axiosAuth = useAxios()
