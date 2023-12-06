@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCU9qm9YCPwWcYlSHVV-LHBBvPqPc7SJf0",
-  authDomain: "assignment12-75b7a.firebaseapp.com",
-  projectId: "assignment12-75b7a",
-  storageBucket: "assignment12-75b7a.appspot.com",
-  messagingSenderId: "34910680124",
-  appId: "1:34910680124:web:25520a8d7bb64f10eb7f39"
+  apiKey: "AIzaSyCEU9gyFfrjb3Vgq1QXBjhDKW3qnTr_kS0",
+  authDomain: "blood-donation-67924.firebaseapp.com",
+  projectId: "blood-donation-67924",
+  storageBucket: "blood-donation-67924.appspot.com",
+  messagingSenderId: "1022219804591",
+  appId: "1:1022219804591:web:59ed1dfae7b3d3c940995a"
 };
 
 // Initialize Firebase
